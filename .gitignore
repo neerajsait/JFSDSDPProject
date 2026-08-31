@@ -31,3 +31,41 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### OS generated files ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### Log files ###
+*.log
+
+### Environment files ###
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+application.properties
+application*.properties
+application*.yml
+
+### Node ###
+node_modules/
+dist/
+
+### Compiled class file ###
+*.class
+
+### Package Files ###
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar

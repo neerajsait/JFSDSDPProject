@@ -166,7 +166,7 @@
             transform: translateY(-2px);
         }
 
-        /* Responsive Design */
+        
         @media (max-width: 768px) {
             .registration-box {
                 padding: 1.5rem;
@@ -182,7 +182,7 @@
             }
         }
 
-        /* Form Validation Styles */
+        
         .input-group input:invalid {
             border-color: #dc3545;
         }
@@ -191,7 +191,7 @@
             box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
         }
 
-        /* Input Placeholder Styling */
+        
         ::placeholder {
             color: #9ca3af;
             opacity: 1;

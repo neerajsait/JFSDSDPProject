@@ -25,7 +25,7 @@ public class Student
 	@Column(name = "student_password", nullable = false, length = 15)
 	private String password;
 	
-	@Column(name = "student_address", nullable = false, length = 50)
+	@Column(name = "student_address", nullable = false, length = 250)
 	private String address;
 	
 	@Column(name = "student_email", nullable = false, length = 30 )

@@ -138,6 +138,11 @@ public class RecruiterServiceImpl implements RecruiterService
 //	}
 
 	@Override
+	public List<Task> getAllTasks() {
+		return taskRepository.findAll();
+	}
+
+	@Override
 	public Task updateTask(Task task) {
 		return taskRepository.save(task);
 	}

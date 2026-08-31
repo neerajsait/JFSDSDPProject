@@ -1,80 +1,10 @@
 <%@page import="com.klef.jfsd.springboot.model.Recruiter"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- <%@ taglib uri="jakarta.tags.core" prefix="c" %>
- 
-<%
-Recruiter r = (Recruiter)session.getAttribute("recruiter");
-if (r == null) {
-    response.sendRedirect("rsessionexpiry");
-    return;
-}
-else if(r.getStatus().equals("Blocked"))
-{
-	response.sendRedirect("rblocked");
-}
-else if(r.getStatus().equals("PENDING"))
-{
-	response.sendRedirect("rpending");
-}
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ include file="recruiter_header.jsp" %>
 
-%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task List - Recruiter Dashboard</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
 <style>
-.main-content {
-    margin-left: 270px;
-    padding: 30px;
-    width: calc(100% - 270px);
-}
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    font-size: 28px;
-    color: #1E3264;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-}
-
-.user-info span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #1E3264;
-}
-
-.logout-btn {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    margin-left: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.logout-btn:hover {
-    background-color: #c82333;
-}
-
-/* Task Section Styling */
 .task-section {
     background-color: #ffffff;
     border-radius: 10px;
@@ -94,7 +24,7 @@ header h1 {
     margin-bottom: 25px;
 }
 
-/* Task List Styling */
+
 .task-list {
     margin-bottom: 30px;
 }
@@ -107,6 +37,7 @@ header h1 {
 
 .task-list ul {
     list-style-type: none;
+    padding: 0;
 }
 
 .task-list li {
@@ -132,7 +63,7 @@ header h1 {
     background-color: #ffffff;
 }
 
-button {
+button.task-action {
     background-color: #1E3264;
     color: white;
     padding: 5px 10px;
@@ -142,11 +73,11 @@ button {
     margin-left: 10px;
 }
 
-button:hover {
+button.task-action:hover {
     background-color: #16274f;
 }
 
-/* Add Task Section */
+
 .add-task h3 {
     color: #1E3264;
     font-size: 20px;
@@ -172,76 +103,41 @@ button:hover {
     margin-bottom: 15px;
 }
 
-.add-task button {
+.add-task button[type="submit"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
+    background-color: #1E3264;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task button[type="submit"]:hover {
+    background-color: #16274f;
 }
 </style>
-<body>
-
-     <div class="sidebar" id="sidebar">
-        <div class="sidebar-header"><br><br>
-            <h2>Welcome Recruiter</h2>
-        </div>
-        <ul>
-            <li><a href="rhome"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-btn" onclick="toggleDropdown('jobPostings')">
-                    <i class="fas fa-briefcase"></i> Manage Job Postings
-                    <span class="arrow">&#9662;</span>
-                </a>
-                <ul class="dropdown-content" id="jobPostings-dropdown">
-                    <li><a href="rview_job_postings"><i class="fas fa-eye"></i> View Job Postings</a></li>
-                    <li><a href="redit_job_posting"><i class="fas fa-user-edit"></i> Edit Job Posting</a></li>
-                    <li><a href="radd_job_posting"><i class="fas fa-plus"></i> Add New Posting</a></li>
-                </ul>
-            </li>
-            <li><a href="rapplications"><i class="fas fa-file-alt"></i> View Applications</a></li>
-            <li><a href="rsettings"><i class="fas fa-cogs"></i> Settings</a></li>
-        </ul>
-    </div>
-</div>
-
-    <div class="main-content" id="mainContent">
-        <header>
-            <h1>Task List</h1>
-            <div class="user-info">
-               <span><%=r.getName() %></span>
-                <a href="rlogin"><button class="logout-btn" >Logout</button></a>
-            </div>
-        </header>
 
         <section class="task-section">
             <h2>Manage Your Tasks</h2>
             <p>View, add, edit, and manage tasks with deadlines related to recruitment activities.</p>
             
-            <!-- Task List -->
+            
             <div class="task-list">
                 <h3>Current Tasks</h3>
                 <ul id="taskList">
-                    <li>
-                        <span>Post new job opening for Developer</span>
-                        <input type="date" class="task-date" value="2024-11-10">
-                        <button onclick="editTask(this)">Edit</button>
-                        <button onclick="completeTask(this)">Mark as Complete</button>
-                    </li>
-                    <li>
-                        <span>Follow up with shortlisted candidates</span>
-                        <input type="date" class="task-date" value="2024-11-12">
-                        <button onclick="editTask(this)">Edit</button>
-                        <button onclick="completeTask(this)">Mark as Complete</button>
-                    </li>
-                    <li>
-                        <span>Review applications for Manager position</span>
-                        <input type="date" class="task-date" value="2024-11-15">
-                        <button onclick="editTask(this)">Edit</button>
-                        <button onclick="completeTask(this)">Mark as Complete</button>
-                    </li>
+                    <c:forEach items="${tasks}" var="task">
+                        <li>
+                            <span><c:out value="${task.description}" /></span>
+                            <input type="date" class="task-date" value="${task.deadline}">
+                            <button class="task-action" onclick="editTask(this)">Edit</button>
+                            <button class="task-action" onclick="completeTask(this)">Mark as Complete</button>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
 
-           
             <div class="add-task">
                 <h3>Add New Task</h3>
                 <form action="addtask" method="POST">
@@ -253,8 +149,57 @@ button:hover {
                 </form>
             </div>
         </section>
-    </div>
 
-    <script src="${pageContext.request.contextPath}/dashboard.js"></script>
-</body>
-</html>
+<%@ include file="recruiter_footer.jsp" %>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let completedTasks = JSON.parse(localStorage.getItem('completedTasks') || '[]');
+            const taskItems = document.querySelectorAll('#taskList li');
+            
+            taskItems.forEach(item => {
+                const taskText = item.querySelector('span').innerText.trim();
+                if (completedTasks.includes(taskText)) {
+                    item.style.textDecoration = "line-through";
+                    item.style.opacity = "0.6";
+                    const btn = item.querySelectorAll('button')[1]; // 2nd button is Mark as Complete
+                    if(btn) {
+                        btn.disabled = true;
+                        btn.innerText = "Completed";
+                        btn.style.backgroundColor = "#28a745";
+                    }
+                }
+            });
+        });
+
+        function completeTask(button) {
+            const listItem = button.parentElement;
+            const taskText = listItem.querySelector('span').innerText.trim();
+
+            listItem.style.textDecoration = "line-through";
+            listItem.style.opacity = "0.6";
+            button.disabled = true;
+            button.innerText = "Completed";
+            button.style.backgroundColor = "#28a745";
+            
+            // Save to localStorage
+            let completedTasks = JSON.parse(localStorage.getItem('completedTasks') || '[]');
+            if (!completedTasks.includes(taskText)) {
+                completedTasks.push(taskText);
+                localStorage.setItem('completedTasks', JSON.stringify(completedTasks));
+            }
+        }
+
+        function editTask(button) {
+            const listItem = button.parentElement;
+            const taskSpan = listItem.querySelector('span');
+            const oldText = taskSpan.innerText.trim();
+            const newText = prompt("Edit Task Description:", oldText);
+            
+            if (newText !== null && newText.trim() !== "") {
+                taskSpan.innerText = newText.trim();
+                // If it was completed, we don't handle renaming in localstorage for this simple mockup,
+                // but usually editing a completed task doesn't make sense anyway.
+            }
+        }
+    </script>

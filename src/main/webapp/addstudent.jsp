@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="JavaScript/dashboard.js" defer></script>
     <style>
-        /* Keep your original styles for sidebar and layout */
+        
        
-        /* New Form Styles */
+        
         
         body{
         font-family: 'Poppins', sans-serif;
@@ -133,7 +133,7 @@
 }
 
 .alert::before {
-    content: '\2713'; /* Unicode for tick mark */
+    content: '\2713'; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -162,7 +162,7 @@
             padding: 0.25rem;
         }
 
-        /* Floating labels effect */
+        
         .form-group {
             position: relative;
         }
@@ -190,12 +190,12 @@
 <body>
 <script src="${pageContext.request.contextPath}/JavaScript/dashboard.js"></script>
     <div class="sidebar-container">
-        <!-- Menu Icon (Hamburger) -->
+        
         <div class="menu-icon">
             <i class="fas fa-bars" onclick="toggleSidebar()"></i>
         </div>
 
-        <!-- Sidebar -->
+        
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header"><br><br>
                 <h2>Hello Admin</h2>

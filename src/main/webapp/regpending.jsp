@@ -23,8 +23,8 @@
             margin-bottom: 20px;
         }
         .image-section img {
-            width: 400px; /* Adjust the width */
-            height: 400px; /* Maintain aspect ratio */
+            width: 400px; 
+            height: 400px; 
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

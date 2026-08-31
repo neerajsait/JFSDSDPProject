@@ -21,7 +21,7 @@
     <title>Student</title>
     <link rel="stylesheet" href="./css/studentsidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Bootstrap CSS -->
+    
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -30,7 +30,7 @@
     @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ body {
     position: relative;
 }
 
-/* Menu Icon (Hamburger) */
+
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -55,22 +55,22 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: gray;
-    z-index: 1000; /* Ensure icon is on top */
+    z-index: 1000; 
 }
 
-/* Sidebar Styles */
+
 .sidebar {
     width: 290px;
     background-color: #2f335a;
     padding: 20px;
     color: white;
     position: fixed;
-    left: -290px; /* Initially hidden */
+    left: -290px; 
     top: 0;
     height: 100%;
     transition: left 0.3s ease;
-    z-index: 900; /* Above content */
-    overflow-y: auto; /* Scroll if content exceeds */
+    z-index: 900; 
+    overflow-y: auto; 
 }
 
 .sidebar.active {
@@ -118,13 +118,13 @@ body {
     margin-right: 9px;
 }
 
-/* Dropdown Arrow Styling */
+
 .arrow {
     margin-left: auto;
     transition: transform 0.3s ease;
 }
 
-/* Dropdown Styles */
+
 .dropdown-content {
     display: none;
     list-style: none;
@@ -164,7 +164,7 @@ body {
     max-height: 300px;
 }
 
-/* Main Content Styles */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -174,26 +174,26 @@ body {
 }
 
 .sidebar.active ~ .container {
-    margin-left: 250px; /* Adjust for sidebar */
+    margin-left: 250px; 
 }
 
 .main-content {
     padding: 50px;
-    min-height: 500vh; /* Ensure it takes at least the full viewport height */
-    margin-left: 320px; /* Reserve space for sidebar */
-    margin-top: 50px; /* Space for header */
+    min-height: 500vh; 
+    margin-left: 320px; 
+    margin-top: 50px; 
     transition: margin-left 0.3s ease;
     flex-grow: 1;
     background-color: #ecf0f1;
     border-radius: 10px;
 }
 
-/* Adjustments for when the sidebar is active */
+
 .sidebar.active ~ .main-content {
     margin-left: 0;
 }
 
-/* Header Styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -240,12 +240,12 @@ header h1 {
     background-color: #c0392b;
 }
 
-/* Dashboard Cards */
 
-/* Button Styles */
+
+
 .primary-btn, .secondary-btn {
-    padding: 8px 16px; /* Reduced padding */
-    font-size: 14px; /* Reduced font size */
+    padding: 8px 16px; 
+    font-size: 14px; 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -271,7 +271,7 @@ header h1 {
     background-color: #c1c1c1;
 }
 
-/* Media Queries for Responsiveness */
+
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -287,16 +287,16 @@ header h1 {
     }
 
     .dashboard-cards {
-        flex-direction: column; /* Ensure cards stack vertically on small screens */
-        gap: 10px; /* Reduced gap for small screens */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     .card {
-        min-width: unset; /* Remove minimum width for smaller screens */
+        min-width: unset; 
     }
 }
 
-/* General styles */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -325,7 +325,7 @@ body, html {
 
 .logo h1 {
     font-size: 2em;
-    color: #0112AC; /* Primary color */
+    color: #0112AC; 
     margin-bottom: 40px;
 }
 
@@ -376,7 +376,7 @@ body, html {
     width: 100%;
 }
 
-/* Admin Login  */
+
 
 
     
@@ -390,7 +390,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-    gap: 20px;  /* Add space between cards */
+    gap: 20px;  
 }
 
 
@@ -399,30 +399,30 @@ body, html {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
-    width: calc(48% - 20px);  /* Adjusted width */
+    width: calc(48% - 20px);  
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 20px; /* Added margin */
+    margin-right: 20px; 
 }
 
 .card:last-child {
-    margin-right: 0; /* No margin on the last card of the row */
+    margin-right: 0; 
 }
 
 
         .card:hover {
-            transform: scale(1.05);  /* Increased zoom effect */
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);  /* Enhanced shadow on hover */
+            transform: scale(1.05);  
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
         }
 
         .card i {
             font-size: 48px;
-            margin-bottom: 15px;  /* Slightly increased space below icon */
+            margin-bottom: 15px;  
             color: #007bff;
         }
 
         .card h3 {
-            margin-bottom: 15px;  /* Slightly increased space below title */
+            margin-bottom: 15px;  
             color: #333;
         }
 
@@ -438,30 +438,30 @@ body, html {
             }
             .card {
                 width: 60%;
-                margin-bottom: 90px;  /* Increased space between cards on mobile */
+                margin-bottom: 90px;  
             }
         }
-        /* Main Content Section */
+        
 section.content-wrapper {
     flex: 1;
-    margin-left: 250px; /* Adjust based on your sidebar width */
+    margin-left: 250px; 
 }
 
-/* Jobs Section */
+
 section.jobs-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Jobs Grid Section */
+
 section.jobs-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
 
-/* Job Card Section */
+
 section.job-card {
     background: white;
     border-radius: 12px;
@@ -480,7 +480,7 @@ section.job-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Company Logo Section */
+
 section.company-logo {
     width: 80px;
     height: 80px;
@@ -496,7 +496,7 @@ section.company-logo i {
     color: #0112AC;
 }
 
-/* Job Information Section */
+
 section.job-info {
     display: flex;
     flex-direction: column;
@@ -537,7 +537,7 @@ section.job-details .detail-item i {
     color: #0112AC;
 }
 
-/* Actions Section */
+
 section.job-actions {
     display: flex;
     flex-direction: column;
@@ -593,7 +593,7 @@ section.job-actions .explore-btn:hover {
     text-decoration: underline;
 }
 
-/* Modal Section */
+
 section.modal {
     display: none;
     position: fixed;
@@ -618,7 +618,7 @@ section.modal-content {
     position: relative;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     section.content-wrapper {
         margin-left: 200px;
@@ -649,7 +649,7 @@ section.modal-content {
     }
 }
 
-/* Full page blur styles */
+
         .modal-backdrop {
             position: fixed;
             top: 0;
@@ -667,7 +667,7 @@ section.modal-content {
             opacity: 1;
         }
 
-        /* Additional custom styles for modal transitions */
+        
         .modal-dialog {
             transition: all 0.3s ease-in-out;
             transform: scale(0.7);
@@ -711,7 +711,7 @@ section.modal-content {
 }
 
 .alert::before {
-    content: '\2713'; /* Unicode for tick mark */
+    content: '\2713'; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -730,22 +730,22 @@ section.modal-content {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: #fee2e2; /* Light red background */
-    border: 1px solid #f87171; /* Red border */
-    color: #b91c1c; /* Dark red text */
+    background-color: #fee2e2; 
+    border: 1px solid #f87171; 
+    color: #b91c1c; 
     font-size: 1rem;
 }
 
 .alert.errormsg::before {
-    content: '\2716'; /* Unicode for 'X' symbol */
+    content: '\2716'; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 24px;
     height: 24px;
-    background: #f87171; /* Red background for icon */
+    background: #f87171; 
     border-radius: 50%;
-    color: #b91c1c; /* Dark red icon */
+    color: #b91c1c; 
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -753,21 +753,21 @@ section.modal-content {
     </style>
 </head>
 <body>
-    <!-- Sidebar Container and other elements remain unchanged -->
+    
 <script src="${pageContext.request.contextPath}/JavaScript/studentdashboard.js"></script>
 
 
-    <!-- Sidebar Container -->
+    
     <div class="sidebar-container">
-        <!-- Menu Icon (Hamburger) -->
+        
         <div class="menu-icon">
             <i class="fas fa-bars" onclick="toggleSidebar()"></i>
         </div>
 
-        <!-- Sidebar -->
+        
         <div class="sidebar">
             <div class="sidebar-header"><br><br>
-                <h2>Hello <%= s.getId() %></h2> <!-- Updated Heading -->
+                <h2>Hello <%= s.getId() %></h2> 
             </div>
             <ul>
   <li><a href="studentdashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
@@ -822,7 +822,7 @@ section.modal-content {
         
   
             <section class="jobs-grid">
-                <!-- Job Card -->
+                
                 
                 <c:forEach items="${jobslist}" var="job" >
                 
@@ -867,7 +867,7 @@ section.modal-content {
       
                 </c:forEach>
                 
-                <!-- Add more job cards here -->
+                
             </section>
         </section>
     </section>
@@ -878,7 +878,7 @@ section.modal-content {
     </div>
     
     
-    <!-- Job Application Confirmation Modal -->
+    
     <div class="modal fade" id="applyJobModal" tabindex="-1" aria-labelledby="applyJobModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -902,7 +902,7 @@ section.modal-content {
     
     
     
-    <!-- Bootstrap JS and Popper.js -->
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     
@@ -939,11 +939,11 @@ section.modal-content {
         
 
     </script>
-    <!-- At the end of your body section -->
+    
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-    <!-- JavaScript remains unchanged -->
+    
 </body>
 
 

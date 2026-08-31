@@ -20,21 +20,21 @@
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Bootstrap CSS -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Additional custom styles */
+        
         .table-hover tbody tr:hover {
             background-color: rgba(0, 123, 255, 0.1);
         }
         .table-custom thead {
-            background-color: #022356; /* Dark blue header */
+            background-color: #022356; 
             color: #f4f7f6;
         }
         .card-header {
-            background-color: #022356 !important; /* Dark blue header for card */
+            background-color: #022356 !important; 
             
         }
    
@@ -590,12 +590,12 @@
 <body>
 <script src="${pageContext.request.contextPath}/JavaScript/dashboard.js"></script>
     <div class="sidebar-container">
-        <!-- Menu Icon (Hamburger) -->
+        
         <div class="menu-icon">
             <i class="fas fa-bars" onclick="toggleSidebar()"></i>
         </div>
 
-        <!-- Sidebar -->
+        
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header"><br><br>
                 <h2>Hello Admin</h2>

@@ -24,7 +24,7 @@ if(s==null)
     @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -41,7 +41,7 @@ body {
     position: relative;
 }
 
-/* Menu Icon (Hamburger) */
+
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -49,22 +49,22 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: gray;
-    z-index: 1000; /* Ensure icon is on top */
+    z-index: 1000; 
 }
 
-/* Sidebar Styles */
+
 .sidebar {
     width: 290px;
     background-color: #2f335a;
     padding: 20px;
     color: white;
     position: fixed;
-    left: -290px; /* Initially hidden */
+    left: -290px; 
     top: 0;
     height: 100%;
     transition: left 0.3s ease;
-    z-index: 900; /* Above content */
-    overflow-y: auto; /* Scroll if content exceeds */
+    z-index: 900; 
+    overflow-y: auto; 
 }
 
 .sidebar.active {
@@ -111,13 +111,13 @@ body {
     margin-right: 10px;
 }
 
-/* Dropdown Arrow Styling */
+
 .arrow {
     margin-left: auto;
     transition: transform 0.3s ease;
 }
 
-/* Dropdown Styles */
+
 .dropdown-content {
     display: none;
     list-style: none;
@@ -157,7 +157,7 @@ body {
     max-height: 300px;
 }
 
-/* Main Content Styles */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -167,25 +167,25 @@ body {
 }
 
 .sidebar.active ~ .container {
-    margin-left: 250px; /* Adjust for sidebar */
+    margin-left: 250px; 
 }
 
 .main-content {
     padding: 20px;
-    margin-left: 290px; /* Reserve space for sidebar */
-    margin-top: 50px; /* Space for header */
+    margin-left: 290px; 
+    margin-top: 50px; 
     transition: margin-left 0.3s ease;
     flex-grow: 1;
     background-color: #ecf0f1;
     border-radius: 10px;
 }
 
-/* Adjustments for when the sidebar is active */
+
 .sidebar.active ~ .main-content {
     margin-left: 0;
 }
 
-/* Header Styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -231,10 +231,10 @@ header h1 {
 }
 
 
-/* Button Styles */
+
 .primary-btn, .secondary-btn {
-    padding: 8px 16px; /* Reduced padding */
-    font-size: 14px; /* Reduced font size */
+    padding: 8px 16px; 
+    font-size: 14px; 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -260,7 +260,7 @@ header h1 {
     background-color: #c1c1c1;
 }
 
-/* Media Queries for Responsiveness */
+
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -276,12 +276,12 @@ header h1 {
     }
 
     .dashboard-cards {
-        flex-direction: column; /* Ensure cards stack vertically on small screens */
-        gap: 10px; /* Reduced gap for small screens */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     .card {
-        min-width: unset; /* Remove minimum width for smaller screens */
+        min-width: unset; 
     }
 }
 
@@ -459,7 +459,7 @@ header h1 {
 </head>
 <body>
 <script src="${pageContext.request.contextPath}/JavaScript/studentdashboard.js"></script>
-    <!-- Sidebar Container (Kept exactly the same as original) -->
+    
     <div class="sidebar-container">
         <div class="menu-icon">
             <i class="fas fa-bars" onclick="toggleSidebar()"></i>

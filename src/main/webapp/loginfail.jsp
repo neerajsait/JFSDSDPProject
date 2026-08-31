@@ -32,7 +32,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-    gap: 20px;  /* Add space between cards */
+    gap: 20px;  
 }
 
 
@@ -41,30 +41,30 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
-    width: calc(48% - 20px);  /* Adjusted width */
+    width: calc(48% - 20px);  
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 20px; /* Added margin */
+    margin-right: 20px; 
 }
 
 .card:last-child {
-    margin-right: 0; /* No margin on the last card of the row */
+    margin-right: 0; 
 }
 
 
         .card:hover {
-            transform: scale(1.05);  /* Increased zoom effect */
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);  /* Enhanced shadow on hover */
+            transform: scale(1.05);  
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
         }
 
         .card i {
             font-size: 48px;
-            margin-bottom: 15px;  /* Slightly increased space below icon */
+            margin-bottom: 15px;  
             color: #007bff;
         }
 
         .card h3 {
-            margin-bottom: 15px;  /* Slightly increased space below title */
+            margin-bottom: 15px;  
             color: #333;
         }
 
@@ -80,13 +80,13 @@
             }
             .card {
                 width: 60%;
-                margin-bottom: 90px;  /* Increased space between cards on mobile */
+                margin-bottom: 90px;  
             }
         }
     </style>
 </head>
 <body>
-    <!-- Sidebar Container and other elements remain unchanged -->
+    
 <script src="${pageContext.request.contextPath}/javascript/studentdashboard.js"></script>
 <%@ include file="studentsidebar.jsp" %>
 <div class="main-content">
@@ -134,7 +134,7 @@
     
 
 
-    <!-- JavaScript remains unchanged -->
+    
 </body>
 
 

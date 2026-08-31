@@ -9,7 +9,7 @@
 
     <style>
     @charset "UTF-8";
-/* From Uiverse.io by JohnnyCSilva */ 
+ 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 body{
@@ -22,22 +22,22 @@ body{
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: #fee2e2; /* Light red background */
-    border: 1px solid #f87171; /* Red border */
-    color: #b91c1c; /* Dark red text */
+    background-color: #fee2e2; 
+    border: 1px solid #f87171; 
+    color: #b91c1c; 
     font-size: 1rem;
 }
 
 .alert.errormsg::before {
-    content: '\2716'; /* Unicode for 'X' symbol */
+    content: '\2716'; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 24px;
     height: 24px;
-    background: #f87171; /* Red background for icon */
+    background: #f87171; 
     border-radius: 50%;
-    color: #b91c1c; /* Dark red icon */
+    color: #b91c1c; 
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -212,8 +212,8 @@ body{
             max-width: none;
             margin-top: 60px;
         }
-        /* Modal styling */
-/* Forgot Password Modal Enhancements */
+        
+
 .modal {
     display: none;
     position: fixed;
@@ -350,7 +350,7 @@ body{
         </form>
     </div>
     
-     <!-- Modals -->
+     
     <div id="forgotPasswordModal" class="modal">
         <div class="modal-header">Forgot Password</div>
         <input type="text" id="forgotUsername" placeholder="Enter Student ID">

@@ -21,13 +21,13 @@ else if(r.getStatus().equals("PENDING"))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${student.id}</title>
-    <!-- Bootstrap CSS -->
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -136,7 +136,7 @@ else if(r.getStatus().equals("PENDING"))
 <body>
     <div class="container">
         <div class="profile-container">
-            <!-- Student Details Section -->
+            
             <div class="row mb-4">
                 <div class="col-12">
                     <h2 class="section-header">
@@ -181,7 +181,7 @@ else if(r.getStatus().equals("PENDING"))
                 </div>
             </div>
 
-            <!-- Course Details Section -->
+            
             <div class="row mb-4">
                 <div class="col-12">
                     <h2 class="section-header">
@@ -223,7 +223,7 @@ else if(r.getStatus().equals("PENDING"))
                 </div>
             </div>
 
-            <!-- Documents Section -->
+            
             <div class="row">
                 <div class="col-12">
                     <h2 class="section-header">
@@ -267,7 +267,7 @@ else if(r.getStatus().equals("PENDING"))
         </div>
     </div>
 
-    <!-- Bootstrap JS (Optional) -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

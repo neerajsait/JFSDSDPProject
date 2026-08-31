@@ -31,7 +31,7 @@
      @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +48,7 @@ body {
     position: relative;
 }
 
-/* Menu Icon (Hamburger) */
+
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -56,22 +56,22 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: gray;
-    z-index: 1000; /* Ensure icon is on top */
+    z-index: 1000; 
 }
 
-/* Sidebar Styles */
+
 .sidebar {
     width: 290px;
     background-color: #2f335a;
     padding: 20px;
     color: white;
     position: fixed;
-    left: -290px; /* Initially hidden */
+    left: -290px; 
     top: 0;
     height: 100%;
     transition: left 0.3s ease;
-    z-index: 900; /* Above content */
-    overflow-y: auto; /* Scroll if content exceeds */
+    z-index: 900; 
+    overflow-y: auto; 
 }
 
 .sidebar.active {
@@ -118,13 +118,13 @@ body {
     margin-right: 10px;
 }
 
-/* Dropdown Arrow Styling */
+
 .arrow {
     margin-left: auto;
     transition: transform 0.3s ease;
 }
 
-/* Dropdown Styles */
+
 .dropdown-content {
     display: none;
     list-style: none;
@@ -164,7 +164,7 @@ body {
     max-height: 300px;
 }
 
-/* Main Content Styles */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -174,25 +174,25 @@ body {
 }
 
 .sidebar.active ~ .container {
-    margin-left: 250px; /* Adjust for sidebar */
+    margin-left: 250px; 
 }
 
 .main-content {
     padding: 20px;
-    margin-left: 310px; /* Reserve space for sidebar */
-    margin-top: 50px; /* Space for header */
+    margin-left: 310px; 
+    margin-top: 50px; 
     transition: margin-left 0.3s ease;
     flex-grow: 1;
     background-color: #ecf0f1;
     border-radius: 10px;
 }
 
-/* Adjustments for when the sidebar is active */
+
 .sidebar.active ~ .main-content {
     margin-left: 0;
 }
 
-/* Header Styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -367,11 +367,11 @@ header h1 {
 .card-jobs .card-icon { color: var(--primary-orange); }
 .card-applications .card-icon { color: var(--primary-purple); }
 .card-interviews .card-icon {
-    color: #007b83; /* A deeper teal shade for interviews */
+    color: #007b83; 
 }
 
 .card-placements .card-icon {
-    color: #28a745; /* A vivid green shade for placements */
+    color: #28a745; 
 }
 
 
@@ -408,11 +408,11 @@ header h1 {
 .card-jobs p { color: var(--primary-orange); }
 .card-applications p { color: var(--primary-purple); }
 .card-interviews  p{
-    color: #007b83; /* A deeper teal shade for interviews */
+    color: #007b83; 
 }
 
 .card-placements  p{
-    color: #28a745; /* A vivid green shade for placements */
+    color: #28a745; 
 }
 
 .card-companies p { color: var(--primary-blue); }
@@ -470,7 +470,7 @@ header h1 {
     </style>
 </head>
 <body>
-    <!-- Sidebar Container (Kept exactly the same as original) -->
+    
     <script src="${pageContext.request.contextPath}/javascript/studentdashboard.js"></script>
     <div class="sidebar-container">
         <div class="menu-icon">

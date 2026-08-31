@@ -132,7 +132,7 @@
             }
         }
 
-        /* Loading spinner for button */
+        
         .login-btn.loading {
             position: relative;
             color: transparent;

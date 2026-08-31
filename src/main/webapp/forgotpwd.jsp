@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Password Reset</title>
-    <!-- Bootstrap CSS -->
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-        /* Poppins Font Import */
+        
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
         body {
@@ -62,7 +62,7 @@
 }
 
 .alert::before {
-    content: '\2713'; /* Unicode for tick mark */
+    content: '\2713'; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -81,22 +81,22 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: #fee2e2; /* Light red background */
-    border: 1px solid #f87171; /* Red border */
-    color: #b91c1c; /* Dark red text */
+    background-color: #fee2e2; 
+    border: 1px solid #f87171; 
+    color: #b91c1c; 
     font-size: 1rem;
 }
 
 .alert.errormsg::before {
-    content: '\2716'; /* Unicode for 'X' symbol */
+    content: '\2716'; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 24px;
     height: 24px;
-    background: #f87171; /* Red background for icon */
+    background: #f87171; 
     border-radius: 50%;
-    color: #b91c1c; /* Dark red icon */
+    color: #b91c1c; 
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -150,7 +150,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
     <script>

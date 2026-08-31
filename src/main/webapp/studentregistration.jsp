@@ -107,10 +107,10 @@
     
 }
 
-/* Password field zoom effect on hover */
+
 .form-group input[type="password"]:hover {
-    transform: scale(1.05); /* Zoom effect */
-    border-color: #007bff; /* Change border color on hover */
+    transform: scale(1.05); 
+    border-color: #007bff; 
 }
 .form-group.agreement input[type="checkbox"] {
     margin-right: 10px;
@@ -132,7 +132,7 @@
   </nav>
     <br><br>
 
-    <!-- Registration Form -->
+    
 
     <div class="form-container">
         <h2>Student Registration Form</h2>
@@ -142,7 +142,7 @@
                 <label for="roll-number">Roll Number / Student ID</label>
                 <input type="text" id="roll-number" name="sid" required>
             </div>
-            <!-- Personal Details -->
+            
             <div class="form-group">
                 <label for="full-name">Full Name</label>
                 <input type="text" id="full-name" name="sname" required>
@@ -162,7 +162,7 @@
                     <option value="Other">Other</option>
                 </select>
             </div>
-            <!-- New Password Field -->
+            
     <div class="form-group">
         <label for="password">Password</label>
         <input type="password" id="password" name="spwd" required>
@@ -183,13 +183,13 @@
                 <input type="tel" id="phone" name="scontact" required>
             </div>
             
-            <!-- Agreement -->
+            
             <div class="form-group agreement">
                 <input type="checkbox" id="agreement" name="agreement" required>
                 <label for="agreement">I confirm that all the information provided is true to the best of my knowledge.</label>
             </div>
 
-            <!-- Form Actions -->
+            
             <div class="form-actions">
                 <button type="submit" class="submit-btn">Submit</button> &nbsp;&nbsp;   
                 <button type="reset" class="reset-btn">Reset</button>

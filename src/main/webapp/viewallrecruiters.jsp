@@ -127,7 +127,7 @@
             margin: 0;
         }
 
-        /* Add icons to cards */
+        
         .card {
             display: flex;
             flex-direction: column;
@@ -141,7 +141,7 @@
             color: #7f8c8d;
         }
 
-        /* Responsive adjustments */
+        
         @media (max-width: 768px) {
             .main-content {
                 padding: 1rem;
@@ -157,7 +157,7 @@
                 grid-template-columns: 1fr;
             }
         }
-        /* Table Styles */
+        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -255,12 +255,12 @@
 <body>
 <script src="${pageContext.request.contextPath}/JavaScript/dashboard.js"></script>
     <div class="sidebar-container">
-        <!-- Menu Icon (Hamburger) -->
+        
         <div class="menu-icon">
             <i class="fas fa-bars" onclick="toggleSidebar()"></i>
         </div>
 
-        <!-- Sidebar -->
+        
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header"><br><br>
                 <h2>Hello Admin</h2>

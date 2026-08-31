@@ -31,7 +31,7 @@
     @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +48,7 @@ body {
     position: relative;
 }
 
-/* Menu Icon (Hamburger) */
+
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -56,22 +56,22 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: gray;
-    z-index: 1000; /* Ensure icon is on top */
+    z-index: 1000; 
 }
 
-/* Sidebar Styles */
+
 .sidebar {
     width: 290px;
     background-color: #2f335a;
     padding: 20px;
     color: white;
     position: fixed;
-    left: -290px; /* Initially hidden */
+    left: -290px; 
     top: 0;
     height: 100%;
     transition: left 0.3s ease;
-    z-index: 900; /* Above content */
-    overflow-y: auto; /* Scroll if content exceeds */
+    z-index: 900; 
+    overflow-y: auto; 
 }
 
 .sidebar.active {
@@ -118,13 +118,13 @@ body {
     margin-right: 10px;
 }
 
-/* Dropdown Arrow Styling */
+
 .arrow {
     margin-left: auto;
     transition: transform 0.3s ease;
 }
 
-/* Dropdown Styles */
+
 .dropdown-content {
     display: none;
     list-style: none;
@@ -164,7 +164,7 @@ body {
     max-height: 300px;
 }
 
-/* Main Content Styles */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -174,25 +174,25 @@ body {
 }
 
 .sidebar.active ~ .container {
-    margin-left: 250px; /* Adjust for sidebar */
+    margin-left: 250px; 
 }
 
 .main-content {
     padding: 20px;
-    margin-left: 290px; /* Reserve space for sidebar */
-    margin-top: 50px; /* Space for header */
+    margin-left: 290px; 
+    margin-top: 50px; 
     transition: margin-left 0.3s ease;
     flex-grow: 1;
     background-color: #ecf0f1;
     border-radius: 10px;
 }
 
-/* Adjustments for when the sidebar is active */
+
 .sidebar.active ~ .main-content {
     margin-left: 0;
 }
 
-/* Header Styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -237,48 +237,48 @@ header h1 {
     background-color: #c0392b;
 }
 
-/* Dashboard Cards */
+
 .dashboard-cards {
     display: flex;
-    flex-direction: column; /* Stack cards vertically */
+    flex-direction: column; 
     justify-content: center;
-    gap: 15px; /* Reduced gap between cards */
+    gap: 15px; 
     margin-top: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
 .card {
     background-color: #7f8996;
-    padding: 10px; /* Reduced padding */
-    border-radius: 8px; /* Slightly smaller border radius */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Lighter shadow */
+    padding: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
     text-align: center;
     flex: 1;
-    min-width: 150px; /* Reduced minimum width */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    min-width: 150px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .card:hover {
-    transform: translateY(-4px); /* Slight lift effect on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly enhanced shadow on hover */
+    transform: translateY(-4px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .card h3 {
-    font-size: 14px; /* Reduced font size */
-    margin-bottom: 6px; /* Reduced margin */
-    color: #ffffff; /* Improved text color */
+    font-size: 14px; 
+    margin-bottom: 6px; 
+    color: #ffffff; 
 }
 
 .card p {
-    font-size: 20px; /* Reduced font size */
+    font-size: 20px; 
     font-weight: bold;
-    color: #ffffff; /* Improved text color */
+    color: #ffffff; 
 }
 
-/* Button Styles */
+
 .primary-btn, .secondary-btn {
-    padding: 8px 16px; /* Reduced padding */
-    font-size: 14px; /* Reduced font size */
+    padding: 8px 16px; 
+    font-size: 14px; 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -304,7 +304,7 @@ header h1 {
     background-color: #c1c1c1;
 }
 
-/* Media Queries for Responsiveness */
+
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -320,16 +320,16 @@ header h1 {
     }
 
     .dashboard-cards {
-        flex-direction: column; /* Ensure cards stack vertically on small screens */
-        gap: 10px; /* Reduced gap for small screens */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     .card {
-        min-width: unset; /* Remove minimum width for smaller screens */
+        min-width: unset; 
     }
 }
 
-/* General styles */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -358,7 +358,7 @@ body, html {
 
 .logo h1 {
     font-size: 2em;
-    color: #0112AC; /* Primary color */
+    color: #0112AC; 
     margin-bottom: 40px;
 }
 
@@ -409,7 +409,7 @@ body, html {
     width: 100%;
 }
 
-/* Admin Login  */
+
 
 
     
@@ -423,7 +423,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-    gap: 20px;  /* Add space between cards */
+    gap: 20px;  
 }
 
 
@@ -432,30 +432,30 @@ body, html {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
-    width: calc(48% - 20px);  /* Adjusted width */
+    width: calc(48% - 20px);  
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 20px; /* Added margin */
+    margin-right: 20px; 
 }
 
 .card:last-child {
-    margin-right: 0; /* No margin on the last card of the row */
+    margin-right: 0; 
 }
 
 
         .card:hover {
-            transform: scale(1.05);  /* Increased zoom effect */
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);  /* Enhanced shadow on hover */
+            transform: scale(1.05);  
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
         }
 
         .card i {
             font-size: 48px;
-            margin-bottom: 15px;  /* Slightly increased space below icon */
+            margin-bottom: 15px;  
             color: #007bff;
         }
 
         .card h3 {
-            margin-bottom: 15px;  /* Slightly increased space below title */
+            margin-bottom: 15px;  
             color: #333;
         }
 
@@ -471,28 +471,28 @@ body, html {
             }
             .card {
                 width: 60%;
-                margin-bottom: 90px;  /* Increased space between cards on mobile */
+                margin-bottom: 90px;  
             }
         }
     </style>
 </head>
 <body>
-    <!-- Sidebar Container and other elements remain unchanged -->
+    
 <script src="${pageContext.request.contextPath}/javascript/studentdashboard.js"></script>
 <script src="${pageContext.request.contextPath}/JavaScript/studentdashboard.js"></script>
 
 
-    <!-- Sidebar Container -->
+    
     <div class="sidebar-container">
-        <!-- Menu Icon (Hamburger) -->
+        
         <div class="menu-icon">
             <i class="fas fa-bars" onclick="toggleSidebar()"></i>
         </div>
 
-        <!-- Sidebar -->
+        
         <div class="sidebar">
             <div class="sidebar-header"><br><br>
-                <h2>Hello <%= s.getId() %></h2> <!-- Updated Heading -->
+                <h2>Hello <%= s.getId() %></h2> 
             </div>
             <ul>
                  <li><a href="studentdashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
@@ -796,7 +796,7 @@ body, html {
 </section>
     </div>
 
-    <!-- JavaScript remains unchanged -->
+    
 </body>
 
 

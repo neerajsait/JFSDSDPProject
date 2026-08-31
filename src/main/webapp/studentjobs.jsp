@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
     @charset "UTF-8";
-/* General Reset */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 * {
     margin: 0;
@@ -39,7 +39,7 @@ body {
     position: relative;
 }
 
-/* Menu Icon (Hamburger) */
+
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -47,22 +47,22 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: gray;
-    z-index: 1000; /* Ensure icon is on top */
+    z-index: 1000; 
 }
 
-/* Sidebar Styles */
+
 .sidebar {
     width: 290px;
     background-color: #2f335a;
     padding: 20px;
     color: white;
     position: fixed;
-    left: -290px; /* Initially hidden */
+    left: -290px; 
     top: 0;
     height: 100%;
-    transition: left 0.5s ease; /* Increased transition duration */
-    z-index: 900; /* Above content */
-    overflow-y: auto; /* Scroll if content exceeds */
+    transition: left 0.5s ease; 
+    z-index: 900; 
+    overflow-y: auto; 
 }
 
 .sidebar.active {
@@ -106,13 +106,13 @@ body {
     margin-right: 10px;
 }
 
-/* Dropdown Arrow Styling */
+
 .arrow {
     margin-left: auto;
     transition: transform 0.3s ease;
 }
 
-/* Dropdown Styles */
+
 .dropdown-content {
     display: none;
     list-style: none;
@@ -122,7 +122,7 @@ body {
     border-radius: 5px;
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.5s ease-in-out; /* Smoother dropdown transition */
+    transition: max-height 0.5s ease-in-out; 
 }
 
 .dropdown-content li {
@@ -149,7 +149,7 @@ body {
     max-height: 300px;
 }
 
-/* Main Content Styles */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -159,25 +159,25 @@ body {
 }
 
 .sidebar.active ~ .container {
-    margin-left: 250px; /* Adjust for sidebar */
+    margin-left: 250px; 
 }
 
 .main-content {
     padding: 20px;
-    margin-left: 270px; /* Reserve space for sidebar */
-    margin-top: 50px; /* Space for header */
+    margin-left: 270px; 
+    margin-top: 50px; 
     transition: margin-left 0.3s ease;
     flex-grow: 1;
     background-color: #ecf0f1;
     border-radius: 10px;
 }
 
-/* Adjustments for when the sidebar is active */
+
 .sidebar.active ~ .main-content {
     margin-left: 0;
 }
 
-/* Header Styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -218,47 +218,47 @@ header h1 {
     background-color: #c0392b;
 }
 
-/* Dashboard Cards */
+
 .dashboard-cards {
     display: flex;
-    flex-direction: column; /* Stack cards vertically */
+    flex-direction: column; 
     justify-content: center;
-    gap: 15px; /* Reduced gap between cards */
+    gap: 15px; 
     margin-top: 20px;
 }
 
 .card {
     background-color: #7f8996;
-    padding: 10px; /* Reduced padding */
-    border-radius: 8px; /* Slightly smaller border radius */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Lighter shadow */
+    padding: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
     text-align: center;
     flex: 1;
-    min-width: 150px; /* Reduced minimum width */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    min-width: 150px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .card:hover {
-    transform: translateY(-4px); /* Slight lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-4px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .card h3 {
-    font-size: 14px; /* Reduced font size */
-    margin-bottom: 6px; /* Reduced margin */
-    color: #ffffff; /* Improved text color */
+    font-size: 14px; 
+    margin-bottom: 6px; 
+    color: #ffffff; 
 }
 
 .card p {
-    font-size: 20px; /* Reduced font size */
+    font-size: 20px; 
     font-weight: bold;
-    color: #ffffff; /* Improved text color */
+    color: #ffffff; 
 }
 
-/* Button Styles */
+
 .primary-btn, .secondary-btn {
-    padding: 8px 16px; /* Reduced padding */
-    font-size: 14px; /* Reduced font size */
+    padding: 8px 16px; 
+    font-size: 14px; 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -284,7 +284,7 @@ header h1 {
     background-color: #c1c1c1;
 }
 
-/* Media Queries for Responsiveness */
+
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -300,16 +300,16 @@ header h1 {
     }
 
     .dashboard-cards {
-        flex-direction: column; /* Ensure cards stack vertically on small screens */
-        gap: 10px; /* Reduced gap for small screens */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     .card {
-        min-width: unset; /* Remove minimum width for smaller screens */
+        min-width: unset; 
     }
 }
 
-/* General styles */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -337,7 +337,7 @@ body, html {
 
 .logo h1 {
     font-size: 2em;
-    color: #0112AC; /* Primary color */
+    color: #0112AC; 
     margin-bottom: 40px;
 }
 
@@ -369,7 +369,7 @@ body, html {
 }
 
 .input-group input:hover {
-    border-color: #0b5ed7; /* Added hover effect */
+    border-color: #0b5ed7; 
 }
 
 .login-btn {
@@ -499,7 +499,7 @@ body, html {
             margin: 0;
         }
 
-        /* Add icons to cards */
+        
         .card {
             display: flex;
             flex-direction: column;
@@ -519,7 +519,7 @@ body, html {
             font-size: 1.5rem;
         }
 
-        /* Responsive adjustments */
+        
         @media (max-width: 768px) {
             .main-content {
                 padding: 1rem;
@@ -535,9 +535,9 @@ body, html {
                 grid-template-columns: 1fr;
             }
         }
-         /* Existing styles... (keep the previous CSS) */
+         
         
-        /* New chart container styles */
+        
         .chart-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -565,13 +565,13 @@ body, html {
             height: 300px !important;
         }
 
-        /* Responsive adjustments */
+        
         @media (max-width: 768px) {
             .chart-grid {
                 grid-template-columns: 1fr;
             }
         }
-        /* Add this to your existing <style> section */
+        
 .job-postings-table {
     margin-top: 2rem;
 }
@@ -606,16 +606,16 @@ body, html {
 }
 .student-info {
     display: flex;
-    justify-content: space-between; /* Space out ID and Name */
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 15px;
-    margin: 20px 0; /* Add spacing around the info box */
-    background-color: #f8f9fa; /* Light background for contrast */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    color: #2c3e50; /* Text color matching the theme */
-    font-size: 1rem; /* Adjust font size for readability */
-    font-weight: 500; /* Slightly bold text */
+    margin: 20px 0; 
+    background-color: #f8f9fa; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    color: #2c3e50; 
+    font-size: 1rem; 
+    font-weight: 500; 
 }
 
 .student-info span {
@@ -624,14 +624,14 @@ body, html {
 }
 
 .student-info strong {
-    font-weight: 600; /* Emphasize the values */
-    color: #0112AC; /* Use primary color for highlighting */
+    font-weight: 600; 
+    color: #0112AC; 
 }
 
-/* Responsive design for smaller screens */
+
 @media (max-width: 768px) {
     .student-info {
-        flex-direction: column; /* Stack vertically */
+        flex-direction: column; 
         text-align: center;
     }
 
@@ -646,12 +646,12 @@ body, html {
 <body>
 <script src="${pageContext.request.contextPath}/JavaScript/dashboard.js"></script>
     <div class="sidebar-container">
-        <!-- Menu Icon (Hamburger) -->
+        
         <div class="menu-icon">
             <i class="fas fa-bars" onclick="toggleSidebar()"></i>
         </div>
 
-        <!-- Sidebar -->
+        
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header"><br><br>
                 <h2>Hello Admin</h2>
@@ -697,8 +697,8 @@ body, html {
         
         
         
-        <!-- Chart Canvas -->
-    <!-- Replace the chart-grid section with a table of job postings -->
+        
+    
 <section class="job-application-search">
     <div class="card">
         <h2 style="color: #2c3e50;

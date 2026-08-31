@@ -64,7 +64,7 @@ nav .navbar .menu {
 }
 section {
   display: flex;
-  height: 80vh; /* Reduced height to bring it up */
+  height: 80vh; 
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -83,7 +83,7 @@ section {
   box-shadow: rgba(0, 0, 0, 0.15);
 }
 .about {
-  padding: 50px 20px 20px; /* Reduced top padding */
+  padding: 50px 20px 20px; 
 }
 .about .container {
   max-width: 800px;
@@ -105,8 +105,8 @@ section {
   color: #333;
 }
 footer {
-padding: 14px 10px; /* Slightly increased padding */
-margin-top: 103px; /* Adds space above the footer */
+padding: 14px 10px; 
+margin-top: 103px; 
 background: #1d07a9;
 color: #fff;
 text-align: center;
@@ -116,14 +116,14 @@ footer h2 {
   margin-bottom: px;
 }
 footer .details {
-  display: flex; /* Flexbox layout */
-  justify-content: center; /* Center items horizontally */
+  display: flex; 
+  justify-content: center; 
   align-items: center;
   font-size: 18px;
   color: #fff;
 }
 footer .details .item {
-  margin: 0 20px; /* Side-by-side alignment */
+  margin: 0 20px; 
   display: flex;
   align-items: center;
 }

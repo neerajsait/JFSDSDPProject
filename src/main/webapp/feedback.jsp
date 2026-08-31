@@ -121,14 +121,14 @@ nav .navbar .menu {
     body {
     background-image: url('./images/HomePage.jpg');
     margin: 0;
-    background-size: 100% auto; /* Adjusts the width to 100% of the screen, height auto */
+    background-size: 100% auto; 
     background-attachment: fixed;
-    background-position: center top; /* Keeps the image centered at the top */
-    background-repeat: no-repeat; /* Prevents repeating of the image */
+    background-position: center top; 
+    background-repeat: no-repeat; 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full height of the viewport */
+    height: 100vh; 
 }
 .feedback-container {
     max-width: 400px;
@@ -136,7 +136,7 @@ nav .navbar .menu {
     padding: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    min-height: 150px; /* Decreased minimum height */
+    min-height: 150px; 
     margin-left: 920px;
     margin-top: 143px;
 }

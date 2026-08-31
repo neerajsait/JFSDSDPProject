@@ -30,7 +30,7 @@
     @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ body {
     position: relative;
 }
 
-/* Menu Icon (Hamburger) */
+
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -55,22 +55,22 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: gray;
-    z-index: 1000; /* Ensure icon is on top */
+    z-index: 1000; 
 }
 
-/* Sidebar Styles */
+
 .sidebar {
     width: 290px;
     background-color: #2f335a;
     padding: 20px;
     color: white;
     position: fixed;
-    left: -290px; /* Initially hidden */
+    left: -290px; 
     top: 0;
     height: 100%;
     transition: left 0.3s ease;
-    z-index: 900; /* Above content */
-    overflow-y: auto; /* Scroll if content exceeds */
+    z-index: 900; 
+    overflow-y: auto; 
 }
 
 .sidebar.active {
@@ -117,13 +117,13 @@ body {
     margin-right: 10px;
 }
 
-/* Dropdown Arrow Styling */
+
 .arrow {
     margin-left: auto;
     transition: transform 0.3s ease;
 }
 
-/* Dropdown Styles */
+
 .dropdown-content {
     display: none;
     list-style: none;
@@ -163,7 +163,7 @@ body {
     max-height: 300px;
 }
 
-/* Main Content Styles */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -173,25 +173,25 @@ body {
 }
 
 .sidebar.active ~ .container {
-    margin-left: 250px; /* Adjust for sidebar */
+    margin-left: 250px; 
 }
 
 .main-content {
     padding: 20px;
-    margin-left: 290px; /* Reserve space for sidebar */
-    margin-top: 50px; /* Space for header */
+    margin-left: 290px; 
+    margin-top: 50px; 
     transition: margin-left 0.3s ease;
     flex-grow: 1;
     background-color: #ecf0f1;
     border-radius: 10px;
 }
 
-/* Adjustments for when the sidebar is active */
+
 .sidebar.active ~ .main-content {
     margin-left: 0;
 }
 
-/* Header Styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -237,7 +237,7 @@ header h1 {
 }
 
 
-/* Media Queries for Responsiveness */
+
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -253,16 +253,16 @@ header h1 {
     }
 
     .dashboard-cards {
-        flex-direction: column; /* Ensure cards stack vertically on small screens */
-        gap: 10px; /* Reduced gap for small screens */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     .card {
-        min-width: unset; /* Remove minimum width for smaller screens */
+        min-width: unset; 
     }
 }
 
-/* General styles */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -291,7 +291,7 @@ body, html {
 
 .logo h1 {
     font-size: 2em;
-    color: #0112AC; /* Primary color */
+    color: #0112AC; 
     margin-bottom: 40px;
 }
 
@@ -342,7 +342,7 @@ body, html {
     width: 100%;
 }
 
-/* Admin Login  */
+
 
 
     
@@ -356,7 +356,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-    gap: 20px;  /* Add space between cards */
+    gap: 20px;  
 }
 
 
@@ -365,20 +365,20 @@ body, html {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
-    width: calc(48% - 20px);  /* Adjusted width */
+    width: calc(48% - 20px);  
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 20px; /* Added margin */
+    margin-right: 20px; 
 }
 
 .card:last-child {
-    margin-right: 0; /* No margin on the last card of the row */
+    margin-right: 0; 
 }
 
 
         .card:hover {
-            transform: scale(1.05);  /* Increased zoom effect */
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);  /* Enhanced shadow on hover */
+            transform: scale(1.05);  
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
         }
 
        .documents-container {
@@ -473,21 +473,21 @@ body, html {
     </style>
 </head>
 <body>
-    <!-- Sidebar Container and other elements remain unchanged -->
+    
 <script src="${pageContext.request.contextPath}/javascript/studentdashboard.js"></script>
 
 <script src="${pageContext.request.contextPath}/JavaScript/studentdashboard.js"></script>
-    <!-- Sidebar Container -->
+    
     <div class="sidebar-container">
-        <!-- Menu Icon (Hamburger) -->
+        
         <div class="menu-icon">
             <i class="fas fa-bars" onclick="toggleSidebar()"></i>
         </div>
 
-        <!-- Sidebar -->
+        
         <div class="sidebar">
             <div class="sidebar-header"><br><br>
-                <h2>Hello <%= s.getId() %></h2> <!-- Updated Heading -->
+                <h2>Hello <%= s.getId() %></h2> 
             </div>
             <ul>
                 <li><a href="studentdashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
@@ -547,7 +547,7 @@ body, html {
                 
                 <c:choose>
                     <c:when test="${not empty doc.resume}">
-                        <!-- Linking to the controller method for downloading the resume -->
+                        
                         <a href="getResume/<%=s.getId() %>" download class="download-btn">Download Resume</a>
                     </c:when>
                     <c:otherwise>
@@ -585,7 +585,7 @@ body, html {
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- JavaScript remains unchanged -->
+    
 </body>
 
 

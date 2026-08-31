@@ -87,6 +87,7 @@ public class RecruiterController {
 		mv.addObject("acnt", acnt);
 		mv.addObject("pcnt", pcnt);
 		mv.addObject("bcnt", bcnt);
+		mv.addObject("tasks", recruiterService.getAllTasks());
 		return mv;
 	}
 
@@ -199,13 +200,13 @@ public class RecruiterController {
 	}
 
 	@GetMapping("rlogout")
-	public ModelAndView reclogout(HttpServletRequest request) {
-		HttpSession session = request.getSession();
-		session.removeAttribute("recruiter");
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("rlogin");
-		return mv;
-	}
+  	public ModelAndView reclogout(HttpServletRequest request) {
+  		HttpSession session = request.getSession();
+  		session.removeAttribute("recruiter");
+  		ModelAndView mv = new ModelAndView();
+  		mv.setViewName("redirect:/recruiter/rlogin");
+  		return mv;
+  	}
 
 	@GetMapping("rsessionexpiry")
 	public ModelAndView rsessionexpiry(HttpServletRequest request) {
@@ -412,6 +413,7 @@ public class RecruiterController {
 	@GetMapping("rtask")
 	public ModelAndView rtask() {
 		ModelAndView mv = new ModelAndView();
+		mv.addObject("tasks", recruiterService.getAllTasks());
 		mv.setViewName("rtask");
 		return mv;
 	}
@@ -487,6 +489,7 @@ public class RecruiterController {
 
         try {
             String taskDescription = request.getParameter("taskDescription");
+            String taskDeadline = request.getParameter("taskDeadline");
             Recruiter recruiter = (Recruiter) session.getAttribute("recruiter");
 
             if (recruiter == null) {
@@ -495,14 +498,13 @@ public class RecruiterController {
 
             Task task = new Task();
             task.setDescription(taskDescription);
+            task.setDeadline(taskDeadline);
             recruiterService.addTask(task);
             
-            mv.setViewName("redirect:/recruiter/tasks/list");
-            mv.addObject("message", "Task added successfully");
+            mv.setViewName("redirect:/recruiter/rtask");
         } catch (Exception e) {
             e.printStackTrace();  
-            mv.setViewName("taskerror");
-            mv.addObject("message", "Error occurred while adding task: " + e.getMessage());
+            mv.setViewName("redirect:/recruiter/rtask?error=true");
         }
 
         return mv;
